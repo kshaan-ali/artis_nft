@@ -43,15 +43,15 @@ contract CuffedUpNFT is ERC721, ERC721Enumerable, ERC721URIStorage, ERC721Pausab
     musicTracks[tokenId] = MusicTrack("Cuffed Up", "Aria Harmony");
     royalties[tokenId] = BASE_PRICE_USD * 100; // Set initial royalties to the base price in USD (in cents)
  }
-  function distributeRoyalties(uint256 tokenId, uint256 amount) external onlyOwner {
-    //require(ownerOf(tokenId) == msg.sender, "You are not the owner of this token");
-    require(amount > 0, "Amount should be greater than zero");
-    uint256 balalnce = address(this).balance;
-    address owner = ownerOf(tokenId);
-        payable(owner).transfer(balalnce);
- // Distribute royalties to token holders
- // Implement your logic here
- }
+//   function distributeRoyalties(uint256 tokenId, uint256 amount) external onlyOwner {
+//     //require(ownerOf(tokenId) == msg.sender, "You are not the owner of this token");
+//     require(amount > 0, "Amount should be greater than zero");
+//     uint256 balalnce = address(this).balance;
+//     address owner = ownerOf(tokenId);
+//         payable(owner).transfer(balalnce);
+//  // Distribute royalties to token holders
+//  // Implement your logic here
+//  }
 
 
 
